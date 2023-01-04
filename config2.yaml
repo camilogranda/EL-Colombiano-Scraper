@@ -1,0 +1,36 @@
+news_sites:
+  el_colombiano:
+    url: https://www.elcolombiano.com
+    queries:
+      sections_link: '.bottom-header .lst-item a'
+      sub_sect_links: '.seccion-noticias-top .tab-grp > a'
+      featured_link: '.modulo-principal-seccion .foto a'
+      sect_news:
+        option_1: '.aui-w70 article h3 a'
+        option_2: '.columnista .right a[href^="/opinion"]'
+        option_3: '.noticias h3 a'
+        # antioquia: '.aui-w70 article h3 a'
+        # colombia: '.aui-w70 article h3 a'
+        # mundo: '.aui-w70 article h3 a'
+        # negocios: '.aui-w70 article h3 a'
+        # deportes: '.aui-w70 article h3 a'
+        # opinion: '.columnista .right a[href^="/opinion"]'
+        # cultura: '.aui-w70 article h3 a'
+        # tendencias: '.aui-w70 article h3 a'
+        # tecnologia: '.aui-w70 article h3 a'
+        # entretenimiento: '.aui-w70 article h3 a'
+        # generacion: '.noticias h3 a'
+      other_news: '.aui-w70 article h3 a'
+      article_title: '.block-headline span'
+      article_date: ['script', {'type':'application/ld+json'}]
+      article_summary: 
+        summary_find: ['div', {'class':'block-headline'}]
+        summary_findall: 'h2'
+      article_body: '.paragraph p'
+      homepage_article_links: '.aui-w70 article h3 a'
+  cambiocolombia:
+    url: https://cambiocolombia.com
+    queries:
+      homepage_article_links: '.sc-hsl1be-0 a'
+      article_body: '.block-text p'
+      article_title: 'h1'
